@@ -39,7 +39,7 @@ const Dictionary = () => {
         style={{ padding: '8px', fontSize: '16px' }}
       />
       <button
-      type='button'
+      type='submit'
         // onClick={handleSearch}
         style={{ padding: '8px', fontSize: '16px', marginLeft: '10px' }}
       >
@@ -47,8 +47,8 @@ const Dictionary = () => {
       </button>
       </form>
       <div style={{ marginTop: '20px', fontSize: '18px' }}>
-      <p style={{textAlign: 'left'}}>Definition:</p>
-        {result}
+      <p style={{ textAlign: 'left' }}><strong>Definition:</strong></p>
+      <p>{result}</p>
       </div>
     </div>
   );
