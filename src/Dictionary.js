@@ -35,11 +35,11 @@ const Dictionary = () => {
         type="text"
         value={searchTerm}
         onChange={handleInputChange}
-        placeholder="Enter a word"
+        placeholder="Search for a word..."
         style={{ padding: '8px', fontSize: '16px' }}
       />
       <button
-      type='submit'
+      type='button'
         // onClick={handleSearch}
         style={{ padding: '8px', fontSize: '16px', marginLeft: '10px' }}
       >
