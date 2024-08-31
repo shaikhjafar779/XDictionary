@@ -28,7 +28,7 @@ const Dictionary = () => {
   };
 
   return (
-    <div style={{ padding: '20px' }}>
+    <div style={{ padding: '20px', textAlign : 'left' }}>
       <h1>Dictionary App</h1>
       <form onSubmit={handleSearch}>
       <input
@@ -47,6 +47,7 @@ const Dictionary = () => {
       </button>
       </form>
       <div style={{ marginTop: '20px', fontSize: '18px' }}>
+      <p style={{textAlign: 'left'}}>Definition:</p>
         {result}
       </div>
     </div>
