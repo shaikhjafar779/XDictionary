@@ -54,7 +54,7 @@ const Dictionary = () => {
       </form>
       <div style={{ marginTop: '20px', fontSize: '18px' }}>
         <p style={{ textAlign: 'left' }}><strong>Definition:</strong></p>
-        <p>{result}</p>
+        {result && <p>{result}</p>}
       </div>
     </div>
   );
