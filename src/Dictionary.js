@@ -16,8 +16,15 @@ const Dictionary = () => {
   };
 
   const handleSearch = (e) => {
-    e.preventDefault();
+    e.preventDefault();  
+
     const normalizedSearchTerm = searchTerm.trim().toLowerCase();
+    
+    if (normalizedSearchTerm === "") {
+      setResult("Word not found in the dictionary.");
+      return;
+    }
+
     const entry = initialDictionary.find(entry => entry.word.toLowerCase() === normalizedSearchTerm);
 
     if (entry) {
@@ -28,27 +35,26 @@ const Dictionary = () => {
   };
 
   return (
-    <div style={{ padding: '20px', textAlign : 'left' }}>
+    <div style={{ padding: '20px', textAlign: 'left' }}>
       <h1>Dictionary App</h1>
       <form onSubmit={handleSearch}>
-      <input
-        type="text"
-        value={searchTerm}
-        onChange={handleInputChange}
-        placeholder="Search for a word..."
-        style={{ padding: '8px', fontSize: '16px' }}
-      />
-      <button
-      type='submit'
-        // onClick={handleSearch}
-        style={{ padding: '8px', fontSize: '16px', marginLeft: '10px' }}
-      >
-        Search
-      </button>
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={handleInputChange}
+          placeholder="Search for a word..."
+          style={{ padding: '8px', fontSize: '16px' }}
+        />
+        <button
+          type="submit"
+          style={{ padding: '8px', fontSize: '16px', marginLeft: '10px' }}
+        >
+          Search
+        </button>
       </form>
       <div style={{ marginTop: '20px', fontSize: '18px' }}>
-      <p style={{ textAlign: 'left' }}><strong>Definition:</strong></p>
-      <p>{result}</p>
+        <p style={{ textAlign: 'left' }}><strong>Definition:</strong></p>
+        <p>{result}</p>
       </div>
     </div>
   );
