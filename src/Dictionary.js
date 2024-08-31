@@ -20,10 +20,10 @@ const Dictionary = () => {
 
     const normalizedSearchTerm = searchTerm.trim().toLowerCase();
     
-    if (normalizedSearchTerm === "") {
-      setResult("Word not found in the dictionary.");
-      return;
-    }
+    // if (normalizedSearchTerm === "") {
+    //   setResult("Word not found in the dictionary.");
+    //   return;
+    // }
 
     const entry = initialDictionary.find(entry => entry.word.toLowerCase() === normalizedSearchTerm);
 
