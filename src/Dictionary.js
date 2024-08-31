@@ -15,7 +15,8 @@ const Dictionary = () => {
     setSearchTerm(e.target.value);
   };
 
-  const handleSearch = () => {
+  const handleSearch = (e) => {
+    e.preventDefault();
     const normalizedSearchTerm = searchTerm.trim().toLowerCase();
     const entry = initialDictionary.find(entry => entry.word.toLowerCase() === normalizedSearchTerm);
 
@@ -28,7 +29,8 @@ const Dictionary = () => {
 
   return (
     <div style={{ padding: '20px' }}>
-      <h1>XDictionary</h1>
+      <h1>Dictionary App</h1>
+      <form onSubmit={handleSearch}>
       <input
         type="text"
         value={searchTerm}
@@ -37,11 +39,13 @@ const Dictionary = () => {
         style={{ padding: '8px', fontSize: '16px' }}
       />
       <button
-        onClick={handleSearch}
+      type='submit'
+        // onClick={handleSearch}
         style={{ padding: '8px', fontSize: '16px', marginLeft: '10px' }}
       >
         Search
       </button>
+      </form>
       <div style={{ marginTop: '20px', fontSize: '18px' }}>
         {result}
       </div>
