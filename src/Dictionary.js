@@ -53,7 +53,7 @@ const Dictionary = () => {
         </button>
       </form>
       <div style={{ marginTop: '20px', fontSize: '18px' }}>
-        <p style={{ textAlign: 'left' }}><strong>Definition:</strong></p>
+        <h3 style={{ textAlign: 'left' }}>Definition:</h3>
         {result && <p>{result}</p>}
       </div>
     </div>
